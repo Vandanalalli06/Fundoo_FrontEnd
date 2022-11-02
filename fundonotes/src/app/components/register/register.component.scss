@@ -55,6 +55,7 @@ a:hover {
 
 .innerDiv mat-hint {
     padding-left: 10px;
+    padding-bottom:1rem;
     font-size: 14px;
     white-space: normal;
 }
@@ -71,6 +72,7 @@ a:hover {
     margin-left: -10px;
     background-color: white;
     text-decoration: none;
+   
 }
 
 
@@ -79,10 +81,10 @@ a:hover {
     padding: 0px 32px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    width:30%;
     font-size: 16px;
     cursor: pointer;
-    color:rgba(10, 11, 14, 0.862);
+    color:rgba(227, 230, 239, 0.862);
     background-color: var(--gm-colortextbutton-ink-color, #1a73e8);
 
 }

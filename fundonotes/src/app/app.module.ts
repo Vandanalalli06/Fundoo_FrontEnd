@@ -9,8 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { ForgotpasswordComponent } from './components/forgotpasswoed/forgotpassword/forgotpassword.component';
+
 import { ResetpassworddComponent } from './components/resetpasswordd/resetpasswordd/resetpasswordd.component';
+import {MatButtonModule} from '@angular/material/button';
+import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 
 
 @NgModule({
@@ -18,8 +20,9 @@ import { ResetpassworddComponent } from './components/resetpasswordd/resetpasswo
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotpasswordComponent,
+    
     ResetpassworddComponent,
+         ForgotpasswordComponent,
    
     
   ],
@@ -29,7 +32,8 @@ import { ResetpassworddComponent } from './components/resetpasswordd/resetpasswo
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
