@@ -1,3 +1,4 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 <div fxLayout="row" fxLayoutAlign=" center" class="mainDiv">
     <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
         <div>
@@ -28,7 +29,7 @@
         <div class="innerDiv">
             <mat-form-field appearance="outline" style="width:100% ;">
                 <mat-label>Username</mat-label>
-                <input matInput placeholder="UserName" type="" formControlName="emailId">
+                <input matInput placeholder="email" type="" formControlName="email">
                 <mat-error>Email Address is required</mat-error>
                 <mat-hint style="margin-left: -10px;">You can use letters,numbers & periods</mat-hint>
             </mat-form-field>
@@ -56,13 +57,16 @@
             <a>Show Password</a>
         </div>
         <div fxLayout="row" fxLayoutAlign="space-between end" class="btn-layout">
-            <button mat-button color="primary" class="btn-instead">Sign in instead</button>
+            <button mat-button color="primary" class="btn-instead" routerLink="/login">Signin instead</button>
             <button mat-raised-button class="btn-create">Next</button>
         </div>
     </div>
+    
+
     <div fxLayout="column" fxLayoutAlign="none center">
         <img src="../../../assets/googlelogo.svg" alt="" style="width: 40vh;margin-top: -60px;">
         <pre class="section-pre">One account. All of Fundoo
      working for you.</pre>
     </div>
-</div>
+<div>
+    <form>
