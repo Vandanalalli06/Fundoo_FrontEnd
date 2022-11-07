@@ -13,8 +13,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ResetpassworddComponent } from './components/resetpasswordd/resetpasswordd/resetpasswordd.component';
 import { MatButtonModule } from '@angular/material/button';
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
-
-
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav'; 
+import { MatExpansionModule } from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
+import { TrashComponent } from './components/trash/trash.component';
+import { ArchiveComponent } from './components/archive/archive.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +33,10 @@ import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassw
 
     ResetpassworddComponent,
     ForgotpasswordComponent,
+    DashboardComponent,
+    GetallnotesComponent,
+    TrashComponent,
+    ArchiveComponent,
    
 
 
@@ -37,7 +50,14 @@ import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassw
     FlexLayoutModule,
     MatButtonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatDialogModule,
+    MatListModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

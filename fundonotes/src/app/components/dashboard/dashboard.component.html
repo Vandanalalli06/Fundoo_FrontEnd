@@ -1,0 +1,71 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button (click)="snav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="image">
+            <img height="100%" width="20%" src="../../../assets/Google keep.png" alt="">
+            <div class="logo">
+                <span style="color:rgb(16, 16, 20);">F</span>
+                <span style="color:rgb(21, 16, 16);">u</span>
+                <span style="color:rgb(21, 16, 16);">n</span>
+                <span style="color:rgb(21, 16, 16);">d</span>
+                <span style="color:rgb(21, 16, 16);">o</span>
+            </div>
+        </div>
+        <div class="searchbar">
+            <div class="icon1">
+                <img height="90%" width="90%" src="../../assets/search_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            </div>
+        </div>
+        <div class="icon2">
+            <img height="60%" width="4%" src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <img height="60%" width="4%" src="../../../assets/view_agenda_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <img height="60%" width="4%" src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <img height="60%" width="4%" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <img height="60%" width="4%" src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+        <mat-sidenav class="list" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+            <mat-nav-list routerLink="/Notes" class="list1">
+                <div class="label2">
+                    <img height="100%" width="20px" src="../../../assets/lightbulb_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="">
+                </div>
+                <a href="">Notes</a>
+            </mat-nav-list>
+            <mat-nav-list routerLink="" class="list1">
+                <div class="label2">
+                    <img height="100%" width="20px" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg"
+                        alt="">
+                </div>
+                <a href="">Remainders</a>
+            </mat-nav-list>
+            <mat-nav-list class="list1">
+                <div class="label2">
+                    <img height="100%" width="20px" src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </div>
+                <a href="">Edit label</a>
+            </mat-nav-list>
+            <mat-nav-list routerLink="/Archive" class="list1">
+                <div class="label2">
+                    <img height="100%" width="20px" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </div>
+                <a href="">Archive</a>
+            </mat-nav-list>
+            <mat-nav-list routerLink="/Trash" class="list1">
+                <div class="label2">
+                    <img height="80%" width="20px" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                </div>
+                <a href="">Trash</a>
+            </mat-nav-list>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

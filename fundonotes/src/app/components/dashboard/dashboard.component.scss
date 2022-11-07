@@ -1,0 +1,98 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;  
+  }
+  
+  .example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+  }
+  
+  h1.example-app-name {
+    margin-left: 8px;
+  }
+  
+  .example-sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+  }
+  
+  .example-is-mobile .example-sidenav-container {
+    /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
+       `<body>` to be our scrolling element for mobile layouts. */
+    flex: 1 0 auto;
+  }
+  .searchbar{
+    height: 80%;
+    width: 55%;
+    display: flex;
+    border: 0px solid red;
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgba(220, 220, 220, 0.452);
+    box-shadow: 5px 5px 5px  rgba(69, 68, 68, 0.183);
+  }
+  .icon1{
+    height: 75%;
+    width: 5%;
+    color: grey;
+    display: flex;
+    border: 0px solid blue;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+  }
+  .image{
+    height: 66%;
+    width: 17%;
+    display: flex;
+    border: 0px solid green;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .logo{
+    height: 66%;
+    width: 50%;
+    border: 0px solid green;
+    font-size: larger;
+  }
+  .icon2{
+    height: 70%;
+    width: 30%;
+    display: flex;
+    border: 0px solid green;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .list{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    border: 0px solid red;
+    
+  }
+  .list1{
+    width: 90%;
+    height: 6%;
+    display: flex;
+    border: 0px solid red;
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgba(240, 255, 255, 0.205);
+  }
+  .label2{
+    height: 80%;
+    width: 40%;
+    border: 0px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }

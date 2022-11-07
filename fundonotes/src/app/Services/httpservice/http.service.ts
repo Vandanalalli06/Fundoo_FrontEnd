@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class HttpService {
 
-  constructor(private httpclient:HttpClient) { }
+  constructor(private httpclient: HttpClient) { }
 
   postService(url: string, data: any, token: boolean = false, options: any) {
     console.log(data)
@@ -19,5 +19,5 @@ export class HttpService {
   putService(url: string, updateNote: any, token: boolean = false, options: any) {
     return this.httpclient.put(url, updateNote, token && options)
   }
-  
+
 }
