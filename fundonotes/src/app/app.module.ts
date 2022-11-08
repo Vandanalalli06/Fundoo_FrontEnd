@@ -24,6 +24,10 @@ import {MatIconModule} from '@angular/material/icon';
 import { GetallnotesComponent } from './components/getallnotes/getallnotes.component';
 import { TrashComponent } from './components/trash/trash.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { CreatenotesComponent } from './components/createnotes/createnotes.component';
+import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
+import { IconComponent } from './components/icon/icon.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { ArchiveComponent } from './components/archive/archive.component';
     GetallnotesComponent,
     TrashComponent,
     ArchiveComponent,
+    CreatenotesComponent,
+    DisplaynotesComponent,
+    IconComponent,
    
 
 
@@ -57,7 +64,8 @@ import { ArchiveComponent } from './components/archive/archive.component';
     MatDialogModule,
     MatListModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
