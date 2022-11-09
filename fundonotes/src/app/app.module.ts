@@ -17,6 +17,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import {MatSidenavModule} from '@angular/material/sidenav'; 
 import { MatExpansionModule } from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
+import { MatTooltipModule} from '@angular/material/tooltip'; 
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
@@ -65,7 +66,9 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     MatMenuModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTooltipModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

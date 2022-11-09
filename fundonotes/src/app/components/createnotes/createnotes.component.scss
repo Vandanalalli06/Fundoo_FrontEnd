@@ -28,6 +28,14 @@
     margin-bottom: 10px;
     // margin-top: -5px;
 }
+.icons{
+    height: 25px;
+    width:5vw;
+    display:flex;
+    justify-content:flex-end;
+    // padding-right: 5px;
+    margin-left: -1px;
+}
 
 .btn-close {
     box-sizing: border-box;
@@ -42,5 +50,5 @@
     border-radius: 4px;
     width: 15%;
     height: 35px;
-    margin-left: 40vh;
+    margin-left: 16vh;
 }

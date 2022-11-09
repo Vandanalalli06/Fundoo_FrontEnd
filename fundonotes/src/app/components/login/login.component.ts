@@ -30,7 +30,7 @@ submitted=false;
       }
       this.User.login(data).subscribe((response:any)=>{
         console.log('response:=>',response.data);
-       
+        localStorage.setItem('token', response.data)
       })
     }
     else{
