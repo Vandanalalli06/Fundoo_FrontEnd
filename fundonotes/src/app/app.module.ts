@@ -29,6 +29,8 @@ import { CreatenotesComponent } from './components/createnotes/createnotes.compo
 import { DisplaynotesComponent } from './components/displaynotes/displaynotes.component';
 import { IconComponent } from './components/icon/icon.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './components/update/update.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,7 @@ import {MatCardModule} from '@angular/material/card';
     CreatenotesComponent,
     DisplaynotesComponent,
     IconComponent,
+    UpdateComponent,
    
 
 
@@ -67,7 +70,8 @@ import {MatCardModule} from '@angular/material/card';
     MatMenuModule,
     MatIconModule,
     MatCardModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
     
   ],
   providers: [],

@@ -7,6 +7,7 @@ import { HttpService } from './httpservice/http.service';
 })
 export class NotesService {
 token:any;
+NoteId:any;
 
   constructor(private http:HttpService) { 
     this.token=localStorage.getItem("token")
@@ -31,5 +32,40 @@ token:any;
     }
     return this.http.getService('https://localhost:44355/api/Notes/GetAll',true,header)
   
+  }
+  UpdateNotes(updateNote: any,NoteId: number) {
+    
+    console.log(this.token);
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':'Bearer ' + this.token
+      }),
+    }
+    return this.http.putService('https://localhost:44355/api/Notes/Update?NoteId=11'+NoteId, updateNote,true, header)
+  }
+  Archieve(data: any) {
+    console.log(this.token);
+  
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization':'Bearer ' + this.token
+      })
+    }
+    return this.http.putService('https://localhost:44355/api/Notes/Archive?noteId='+data,null, true, header)
+  }
+  delete(data: any) {
+    console.log(data);
+     let header = {
+      headers: new HttpHeaders({
+        
+        'Content-type': 'application/json',
+        'Authorization' : 'Bearer '+ this.token,
+  
+      }),
+    };
+    return this.http.putService('https://localhost:44355/api/Notes/Delete?NoteId='+data,null, true,header );
   }
 }

@@ -1,8 +1,52 @@
-<div class="icons">
+<!-- <div class="icons">
     <img height="25px" width="25px" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
     <img height="25px" width="25px"  src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="">
     <img height="25px" width="25px"  src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
     <img height="25px" width="25px"  src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-    <img height="25px" width="25px" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    
+    <img (click)="Archieve()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" matTooltip="Archieve" >
     <img height="25px" width="25px" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+</div> -->
+<div class="OuterDiv">
+
+    <div role="button" class="add" >
+        <img class="divImg" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    </div>
+    <div role="button" class="add" >
+        <img class="divImg" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    </div>
+
+    <div role="button" class="add"  matTooltip="Background color" [matMenuTriggerFor]="color">
+        <img class="divImg" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+        <mat-menu #color="matMenu">
+            <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding-left: 3px;">
+                <div *ngFor="let color of colorsArr" class="colorBox">
+                    <button class="colors" mat-icon-button mat-raised-button [style.background]="color?.Colorcode"
+                        ></button>
+                </div>
+            </div>
+        </mat-menu>
+    </div>
+    <div role="button" class="add" >
+        <img class="divImg" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    </div>
+    <div role="button" class="add"  (click)="Archieve()">
+        <img class="divImg" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    </div>
+
+    <div role="button" class="add">
+
+        <div class ="MoreItem"  mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+            <img class="divImg" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+            <mat-menu #menu="matMenu" >
+                <button mat-menu-item>Delete note</button>
+                <button mat-menu-item>Add Label</button>
+                <button mat-menu-item>Add Drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show Checkboxes</button>
+                <button mat-menu-item>Copy to google Docs</button>
+            </mat-menu>
+        </div>
+
+    </div>
 </div>

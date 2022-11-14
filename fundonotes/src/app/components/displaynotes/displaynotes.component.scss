@@ -1,30 +1,23 @@
-.maincontainer{
-    height: 25vh;
-    width: 20vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   box-shadow: 8px 8px 8px gainsboro;
-   position: relative;
-   top: 40px;
-   left: 80px;
-}
-.sub{
-height: 100%;
-width: 100%;
-display: flex;
-border: 1px solid gainsboro;
-border-radius: 5px;
-flex-direction: column;
-align-items: center;
-}
-
-.title-section img {
-    width: 5%;
-    height: 4%;
-}
-
-.note-section {
+.main-div {
+    margin-left: 150px;
+  }
+  
+  .main-div mat-card {
+    width: 40vh;
+    margin-left: 5px;
+    margin-top: 30px;
+    margin-right: 12px;
+    padding: 20px 20px 20px;
+  }
+  
+  .pin-text img {
+    width: 25px;
+    height: 8%;
+    margin-top: -10px;
+    margin-right: -10px;
+  }
+  
+  .note-section {
     border: none;
     outline: none;
     width: 100%;
@@ -37,52 +30,6 @@ align-items: center;
     font-weight: 500;
     line-height: 1.5rem;
     text-decoration: center;
-    margin-bottom: 10px;
-    // margin-top: -5px;
-}
-.sub2{
-    height: 35%;
-    width: 97%;
-    display: flex;
-    border: 0px solid red;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.img{
-    height: 30%;
-    width: 95%;
-    border: 0px;
-    font-size: 15px;
-   
-}
-.take{
-    height: 30%;
-    width: 95%;
-    border: 0px;
-    font-size: 15px;
-   
-}
-
-
-.sub1{
-    // height: 35%;
-    // width: 100%;
-    // display: flex;
-    // border: 0px solid red;
-    // align-items: flex-end;
-    // justify-content: space-evenly;
-    border: none;
-  outline: none;
-  width: 100%;
-  box-sizing: border-box;
-  resize: none;
-  font-weight: bold;
-  letter-spacing: .00625em;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  text-decoration: center;
-  padding-top: 5px;
-  margin-top: -10px;
-}
+    padding-top: 5px;
+    margin-top: -10px;
+  }
