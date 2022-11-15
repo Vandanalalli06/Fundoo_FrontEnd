@@ -46,7 +46,7 @@ NoteId:any;
     return this.http.putService('https://localhost:44355/api/Notes/Update?NoteId=11'+NoteId, updateNote,true, header)
   }
   Archieve(data: any) {
-    console.log(this.token);
+    console.log(this.token,data);
   
     let header = {
       headers: new HttpHeaders({
@@ -54,10 +54,10 @@ NoteId:any;
         'Authorization':'Bearer ' + this.token
       })
     }
-    return this.http.putService('https://localhost:44355/api/Notes/Archive?noteId='+data,null, true, header)
+    return this.http.putService('https://localhost:44355/api/Notes/Archive?noteId='+data,{}, true, header)
   }
-  delete(data: any) {
-    console.log(data);
+  Trash(data: any) {
+    console.log(this.token,data);
      let header = {
       headers: new HttpHeaders({
         
@@ -66,6 +66,6 @@ NoteId:any;
   
       }),
     };
-    return this.http.putService('https://localhost:44355/api/Notes/Delete?NoteId='+data,null, true,header );
+    return this.http.putService('https://localhost:44355/api/Notes/Trash?noteId=22'+data,{}, true,header );
   }
 }

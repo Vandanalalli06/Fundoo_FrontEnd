@@ -19,7 +19,7 @@
     <div role="button" class="add"  matTooltip="Background color" [matMenuTriggerFor]="color">
         <img class="divImg" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
         <mat-menu #color="matMenu">
-            <div fxLayout="row wrap" fxLayoutAlign="start center" style="padding-left: 3px;">
+            <div fxLayout="row wrap" fxLayoutAlign="center" style="padding-right: 100px;">
                 <div *ngFor="let color of colorsArr" class="colorBox">
                     <button class="colors" mat-icon-button mat-raised-button [style.background]="color?.Colorcode"
                         ></button>
@@ -39,7 +39,7 @@
         <div class ="MoreItem"  mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
             <img class="divImg" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
             <mat-menu #menu="matMenu" >
-                <button mat-menu-item>Delete note</button>
+                <button mat-menu-item (click)="isTrash()">Delete note</button>
                 <button mat-menu-item>Add Label</button>
                 <button mat-menu-item>Add Drawing</button>
                 <button mat-menu-item>Make a copy</button>
@@ -47,6 +47,6 @@
                 <button mat-menu-item>Copy to google Docs</button>
             </mat-menu>
         </div>
-
+        
     </div>
 </div>

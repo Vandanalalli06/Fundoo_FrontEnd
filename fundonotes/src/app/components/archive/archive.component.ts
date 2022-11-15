@@ -15,7 +15,7 @@ noteList:any;
   }
 getarchieve(){
   this.note.GetNotes().subscribe((response:any)=>{
-    console.log(response)
+    console.log(this.noteList)
     this.noteList=response.data;
     this.noteList.reverse();
    this.noteList=this.noteList.filter((object:any)=>{
