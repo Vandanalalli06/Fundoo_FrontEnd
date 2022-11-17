@@ -43,7 +43,7 @@ NoteId:any;
         'Authorization':'Bearer ' + this.token
       }),
     }
-    return this.http.putService('https://localhost:44355/api/Notes/Update?NoteId=11'+NoteId, updateNote,true, header)
+    return this.http.putService('https://localhost:44355/api/Notes/Update?NoteId='+NoteId, updateNote,true, header)
   }
   Archieve(data: any) {
     console.log(this.token,data);
@@ -66,6 +66,17 @@ NoteId:any;
   
       }),
     };
-    return this.http.putService('https://localhost:44355/api/Notes/Trash?noteId=22'+data,{}, true,header );
+    return this.http.putService('https://localhost:44355/api/Notes/Trash?NoteId='+data,{}, true,header );
+  }
+  
+  Color(data:any){
+    console.log(this.token);
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.http.putService('https://localhost:44355/api/Notes/Colour?notesId=5&Colour=blue'+ data,null, true, header)
   }
 }

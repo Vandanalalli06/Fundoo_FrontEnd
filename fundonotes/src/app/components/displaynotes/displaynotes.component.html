@@ -1,18 +1,32 @@
-<div fxLayout="row wrap" fx Align="" class="main-div" style="width:auto;">
+<!-- <div fxLayout="row wrap" fx Align="" class="main-div" style="width:auto;">
     <div *ngFor="let noteArray of childMessage">
-        
+
         <mat-card [style.background]="noteArray.color">
             <div fxLayout="row" fxLayoutAlign="" class="pin-text">
                 <textarea name="text" id="text" class="note-section" placeholder="Title"
-                    (click)="openDialog(noteArray)" >{{noteArray.title}}</textarea>
+                    (click)="openDialog(noteArray)">{{noteArray.title}}</textarea>
                 <img src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-           </div>
-           <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
-           (click)="openDialog(noteArray)">{{noteArray.description}}</textarea>
-       <div fxLayout="row" fxLayoutAlign="space-between end">
-            
-                <app-icon [noteCard]='noteArray'></app-icon>
-                </div>  
-            </mat-card>
-        </div>
             </div>
+            <textarea name="text" id="text" class="note-section" placeholder="Take a note..."
+                (click)="openDialog(noteArray)">{{noteArray.description}}</textarea>
+            <div fxLayout="row" fxLayoutAlign="space-between end">
+
+                <app-icon [noteCard]='noteArray'></app-icon>
+            </div>
+        </mat-card>
+    </div>
+</div> -->
+
+<div class="boxsize">
+    <div *ngFor="let notes of childMessage" class="con">
+        <mat-card class="card" [style.background]="notes.color">
+            <div>
+                <h2 (click)="openDialog(notes)">{{notes.title}}</h2>
+                <p class="para" (click)="openDialog(notes)">{{notes.description}}</p>
+            </div>
+            <div class="con" *ngIf="notes" >
+                <app-icon [noteCard]="notes"></app-icon>
+            </div>
+        </mat-card>
+    </div>
+</div>

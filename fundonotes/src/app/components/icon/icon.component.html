@@ -8,45 +8,58 @@
     <img height="25px" width="25px" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
 </div> -->
 <div class="OuterDiv">
-
-    <div role="button" class="add" >
-        <img class="divImg" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    <div role="button" class="add" *ngIf="!trash">
+        <img class="divImg" src="../../../assets/add_alert_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add" >
-        <img class="divImg" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    <div role="button" class="add" *ngIf="!trash">
+        <img class="divImg" src="../../../assets/person_add_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
 
-    <div role="button" class="add"  matTooltip="Background color" [matMenuTriggerFor]="color">
-        <img class="divImg" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-        <mat-menu #color="matMenu">
-            <div fxLayout="row wrap" fxLayoutAlign="center" style="padding-right: 100px;">
-                <div *ngFor="let color of colorsArr" class="colorBox">
-                    <button class="colors" mat-icon-button mat-raised-button [style.background]="color?.Colorcode"
-                        ></button>
+    <div role="button" class="add" *ngIf="!trash" matTooltip="Background color" [matMenuTriggerFor]="color">
+        <img class="divImg" src="../../../assets/palette_FILL0_wght400_GRAD0_opsz48.svg">
+        <mat-menu #color="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
+            <div fxLayout="row wrap" class="colour" fxLayoutAlign="start center" style="padding-left: 3px;">
+                <div *ngFor="let color of colorarray" class="colorBox">
+                    <button class="colors" mat-mini-fab (click)="updatecolor(color?.Colorcode)" mat-icon-button
+                        mat-raised-button [style.background]="color?.Colorcode"></button>
                 </div>
             </div>
         </mat-menu>
     </div>
-    <div role="button" class="add" >
-        <img class="divImg" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    <div role="button" class="add" *ngIf="!trash">
+        <img class="divImg" src="../../../assets/image_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add"  (click)="Archieve()">
-        <img class="divImg" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+    <div role="button" class="add" *ngIf="!noteCard?.isArchieve && !noteCard?.trash">
+        <img class="divImg" (click)=" Archieve()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg">
+        <!-- <img  *ngIf="!noteCard?.isArchieve && !noteCard?.trash" (click)="Archieve()" src="../../../assets/archive_FILL0_wght400_GRAD0_opsz48.svg"> -->
+        <img *ngIf="noteCard?.isArchieve && !noteCard?.trash" src="../../../assets/unarchive.svg"
+            (click)="UnArchievenote()">
     </div>
 
-    <div role="button" class="add">
+    <!-- <div role="button" class="add" *ngIf="isArchieve && !trash" (click)="UnArchievenote()">
+        <img class="divImg" src="../../../assets/unarchive.svg">
+    </div> -->
 
-        <div class ="MoreItem"  mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
-            <img class="divImg" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg" alt="">
-            <mat-menu #menu="matMenu" >
-                <button mat-menu-item (click)="isTrash()">Delete note</button>
-                <button mat-menu-item>Add Label</button>
-                <button mat-menu-item>Add Drawing</button>
-                <button mat-menu-item>Make a copy</button>
-                <button mat-menu-item>Show Checkboxes</button>
-                <button mat-menu-item>Copy to google Docs</button>
-            </mat-menu>
+    <div class="add" *ngIf="!trash" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+        <img class="divImg" src="../../../assets/more_vert_FILL0_wght400_GRAD0_opsz48.svg">
+        <mat-menu #menu="matMenu" yPosition="below">
+            <button mat-menu-item class="matmenuBtn" (click)="isTrash()">Delete note</button>
+            <button mat-menu-item class="matmenuBtn">Add Label</button>
+            <button mat-menu-item class="matmenuBtn">Add drawing</button>
+            <button mat-menu-item class="matmenuBtn">Make a copy</button>
+            <button mat-menu-item class="matmenuBtn">Show check boxes</button>
+            <button mat-menu-item class="matmenuBtn">Copy to google Docs</button>
+        </mat-menu>
+    </div>
+    <div *ngIf="trash" fxLayout="row" fxLayourAlign="center">
+        <div matTooltip="Delete forever">
+            <img class="icons" (click)="isTrash()" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
-        
+
+        <div class="buttons" matTooltip="Restore">
+            <img class="icons" src="../../../assets/Restore.png" (click)=" Restore()">
+        </div>
+
     </div>
+
 </div>

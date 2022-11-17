@@ -31,7 +31,7 @@ import { IconComponent } from './components/icon/icon.component';
 import {MatCardModule} from '@angular/material/card';
 import { UpdateComponent } from './components/update/update.component';
 import { FormsModule } from '@angular/forms';
-
+import { AuthguardserviceService } from './Services/authguardservice.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,10 +71,13 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatCardModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+   
     
   ],
-  providers: [],
+  providers: [
+    AuthguardserviceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

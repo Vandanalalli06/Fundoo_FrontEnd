@@ -17,11 +17,27 @@ export class GetallnotesComponent implements OnInit {
     this.note.GetNotes().subscribe((response: any) => {
       console.log(response.data);
       this.noteArray = response.data;
-      this.noteArray=this.noteArray.reverse();
-      this.noteArray=this.noteArray.filter((object:any)=>{
-       return object.archive==false && object.trash == false;
-      // console.log(this.noteArray);
+      this.noteArray = this.noteArray.reverse();
+      this.noteArray = this.noteArray.filter((object: any) => {
+        return object.archive == false && object.trash == false;
+        // console.log(this.noteArray);
+      })
     })
-  })
+  }
+  receiveMessage($event: any) {
+    console.log($event);
+    this.getAllNote();
+  }
+  updatedicon($event:any) {
+    console.log($event);
+    this.getAllNote();
+  }
+  receiveMessagearchive($event:any){
+    console.log($event);
+    this.getAllNote();
+  }
+  iconRefresh($event:any){
+    console.log($event)
+    this.getAllNote();
   }
 }

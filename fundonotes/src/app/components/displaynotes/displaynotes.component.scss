@@ -1,35 +1,60 @@
-.main-div {
-    margin-left: 150px;
-  }
+// .main-div {
+//     margin-left: 150px;
+//   }
   
-  .main-div mat-card {
-    width: 40vh;
-    margin-left: 5px;
-    margin-top: 30px;
-    margin-right: 12px;
-    padding: 20px 20px 20px;
-  }
+//   .main-div mat-card {
+//     width: 40vh;
+//     margin-left: 5px;
+//     margin-top: 30px;
+//     margin-right: 12px;
+//     padding: 20px 20px 20px;
+//   }
   
-  .pin-text img {
-    width: 25px;
-    height: 8%;
-    margin-top: -10px;
-    margin-right: -10px;
-  }
+//   .pin-text img {
+//     width: 25px;
+//     height: 8%;
+//     margin-top: -10px;
+//     margin-right: -10px;
+//   }
   
-  .note-section {
-    border: none;
-    outline: none;
-    width: 100%;
-    box-sizing: border-box;
-    resize: none;
-    font-weight: bold;
-    letter-spacing: .00625em;
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    text-decoration: center;
-    padding-top: 5px;
-    margin-top: -10px;
-  }
+//   .note-section {
+//     border: none;
+//     outline: none;
+//     width: 100%;
+//     box-sizing: border-box;
+//     resize: none;
+//     font-weight: bold;
+//     letter-spacing: .00625em;
+//     font-family: "Google Sans", Roboto, Arial, sans-serif;
+//     font-size: 1rem;
+//     font-weight: 500;
+//     line-height: 1.5rem;
+//     text-decoration: center;
+//     padding-top: 5px;
+//     margin-top: -10px;
+//   }
+.boxsize
+{
+  display: flex; 
+  flex-flow: row wrap;
+  padding-left: 34px;
+
+}
+.con{
+  padding-right: 30px;
+  display: flex;
+  padding-top: 5px;
+  
+
+}
+
+.card{
+  
+  width:270px;
+  max-height:150px;
+  margin:15px auto 16px auto;
+  border: 1px solid rgb(186, 184, 184);
+//  padding: 20px 15px 10px 20px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}

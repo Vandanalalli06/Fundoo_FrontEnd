@@ -8,6 +8,7 @@ import { NotesService } from 'src/app/Services/notes.service';
 })
 export class ArchiveComponent implements OnInit {
 noteList:any;
+
   constructor(private note:NotesService) { }
 
   ngOnInit(): void {
@@ -24,4 +25,6 @@ getarchieve(){
   console.log("Archieve" +this.noteList);
 })
 }
-}
+receiveMessage(event: any) {
+  this.getarchieve();
+}}

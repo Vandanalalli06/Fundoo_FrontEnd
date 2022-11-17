@@ -17,11 +17,14 @@ export class TrashComponent implements OnInit {
     console.log('Get trash list successful');
     this.note.GetNotes().subscribe((response: any) => {
       this.trashlist = response.data;
-      this.trashlist.reverse();
+      // this.trashlist.reverse();
       this.trashlist = this.trashlist.filter((object: any) => {
         return object.trash==true;
       })
-      console.log("trash list", this.trashlist);
+      console.log(this.trashlist);
     })
+  }
+  receiveMessage(event:any){
+    this.trash();
   }
 }

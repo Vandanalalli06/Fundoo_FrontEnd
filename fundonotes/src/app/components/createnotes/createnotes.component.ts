@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NotesService } from 'src/app/Services/notes.service';
 @Component({
@@ -7,6 +7,7 @@ import { NotesService } from 'src/app/Services/notes.service';
   styleUrls: ['./createnotes.component.scss']
 })
 export class CreatenotesComponent implements OnInit {
+  @Output()messageEvent = new EventEmitter<any>();
   show = false;
   createNote!: FormGroup;
   submitted = false;
@@ -30,10 +31,12 @@ export class CreatenotesComponent implements OnInit {
       let data = {
         title: this.createNote.value.title,
         description: this.createNote.value.description,
+        color:this.createNote.value.color
 
       }
       this.note.CreateNotes(data).subscribe((response: any) => {
         console.log(response);
+        this.messageEvent.emit(response)
 
       });
     }
@@ -41,6 +44,9 @@ export class CreatenotesComponent implements OnInit {
       console.log("Invalid Data", this.createNote.value);
       console.log("no api call")
     }
+  }
+  resetForm() {
+    this.createNote.reset();
   }
 }
 
