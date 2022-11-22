@@ -32,6 +32,7 @@ import {MatCardModule} from '@angular/material/card';
 import { UpdateComponent } from './components/update/update.component';
 import { FormsModule } from '@angular/forms';
 import { AuthguardserviceService } from './Services/authguardservice.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import { AuthguardserviceService } from './Services/authguardservice.service';
     DisplaynotesComponent,
     IconComponent,
     UpdateComponent,
+    
    
 
 

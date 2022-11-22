@@ -70,13 +70,14 @@ NoteId:any;
   }
   
   Color(data:any){
-    console.log(this.token);
+    console.log(this.token,data);
     let header={
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
         'Authorization':'Bearer '+this.token
       })
     }
-    return this.http.putService('https://localhost:44355/api/Notes/Colour?notesId=5&Colour=blue'+ data,null, true, header)
+    return this.http.putService(`https://localhost:44355/api/Notes/Colour?notesId=${data.noteId}&Colour=${data.colour}`,{}, true, header)
+    // return this.http.putService('https://localhost:44355/api/Notes/Colour?notesId=&Colour=',{},true,header)
   }
 }

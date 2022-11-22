@@ -19,13 +19,13 @@
 
 <div class="boxsize">
     <div *ngFor="let notes of childMessage" class="con">
-        <mat-card class="card" [style.background]="notes.color">
+        <mat-card class="card" [style.background]="notes.Colour">
             <div>
                 <h2 (click)="openDialog(notes)">{{notes.title}}</h2>
                 <p class="para" (click)="openDialog(notes)">{{notes.description}}</p>
             </div>
             <div class="con" *ngIf="notes" >
-                <app-icon [noteCard]="notes"></app-icon>
+                <app-icon [noteCard]="notes" (displayicons)="recieveArchiveNote($event)" (Trash)="Trash($event)"></app-icon>
             </div>
         </mat-card>
     </div>

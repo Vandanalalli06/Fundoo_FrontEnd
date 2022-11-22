@@ -12,6 +12,7 @@ export class DisplaynotesComponent implements OnInit {
   @Output() changeNoteEvent = new EventEmitter<string>();
   @Output() updatedisplay = new EventEmitter<string>();
   @Output() messageEvent = new EventEmitter<string>();
+  @Output()IsTrash=new EventEmitter<string>();
   constructor(private dialog:MatDialog) { }
   
   ngOnInit(): void {
@@ -34,5 +35,8 @@ export class DisplaynotesComponent implements OnInit {
   iconRefresh($event: any) {
     console.log($event);
     this.changeNoteEvent.emit($event)
+  }
+  Trash(event:any){
+    this.IsTrash.emit(event)
   }
   }

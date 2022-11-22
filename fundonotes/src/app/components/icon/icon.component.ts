@@ -13,22 +13,23 @@ export class IconComponent implements OnInit {
   @Input() noteCard: any;
   @Output() changeNoteEvent = new EventEmitter<string>();
   @Output() displayicons = new EventEmitter<string>();
+  @Output() Trash=new EventEmitter<string>();
   noteID: any;
   isArchieve: boolean = false;
   trash: boolean = false;
   colorId:any;
-  colorarray = [{ Colorcode: "#f28b82" },
-  { Colorcode: "#fbbc04" },
-  { Colorcode: "#fff475" },
-  { Colorcode: "#ccff90" },
-  { Colorcode: "#a7ffeb" },
-  { Colorcode: "#cbf0f8" },
-  { Colorcode: "#aecbfa" },
-  { Colorcode: "#d7aefb" },
-  { Colorcode: "#fdcfe8" },
-  { Colorcode: "#e6c9a8" },
-  { Colorcode: "#e8eaed" },
-  { Colorcode: "white" }];
+  colorarray = [{ Colorcode: "blue" },
+  { Colorcode: "red" },
+  { Colorcode: "pink" },
+  { Colorcode: "white" },
+  { Colorcode: "black" },
+  { Colorcode: "orange" },
+  { Colorcode: "green" },
+  { Colorcode: "purple" },
+  { Colorcode: "yellow" },
+  { Colorcode: "maroon" },
+  { Colorcode: "magenta" },
+  { Colorcode: "violet" }];
   constructor(private note: NotesService ,private activatedroute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -50,13 +51,16 @@ export class IconComponent implements OnInit {
     console.log(data);
     this.note.Archieve(this.noteCard.notesId).subscribe((response: any) => {
       console.log("Note archieved Successfully", response);
+      this.displayicons.emit(response);
+        console.log(response)
 
     })
   }
   isTrash() {
     this.note.Trash(this.noteCard.notesId).subscribe((response: any) => {
       console.log("Note trash Successfull", response);
-      
+      this.Trash.emit(response);
+        console.log(response)
 
     })
   }
@@ -71,10 +75,28 @@ export class IconComponent implements OnInit {
     })
   }
   updatecolor(colour: any) {
-    this.colorId = this.noteCard.color=colour; 
-    this.note.Color(this.noteCard.notesId).subscribe((response: any) => {
+    let data={
+      noteId:this.noteCard.notesId,
+      Colour:colour
+    }
+    this.colorId = this.noteCard.Colour=colour; 
+    console.log(this.noteCard.notesId)
+    this.note.Color(data).subscribe((response: any) => {
       console.log(response);
       this.changeNoteEvent.emit(response);
         console.log(response)
     })
-}}
+  // updatecolor(colour: any) {
+  //   this.colorId = this.noteCard.Colour=colour;
+    
+     
+  //   this.note.Color(this.noteCard.notesId).subscribe((response: any) => {
+  //     console.log(response);
+  //     this.changeNoteEvent.emit(response);
+
+  //     console.log(response)
+
+  //   })
+
+  }
+}

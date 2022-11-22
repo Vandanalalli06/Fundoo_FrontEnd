@@ -40,4 +40,7 @@ export class GetallnotesComponent implements OnInit {
     console.log($event)
     this.getAllNote();
   }
+  trashmessage($event:any){
+    this.getAllNote();
+  }
 }
