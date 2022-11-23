@@ -18,18 +18,18 @@ export class IconComponent implements OnInit {
   isArchieve: boolean = false;
   trash: boolean = false;
   colorId:any;
-  colorarray = [{ Colorcode: "blue" },
-  { Colorcode: "red" },
-  { Colorcode: "pink" },
-  { Colorcode: "white" },
-  { Colorcode: "black" },
-  { Colorcode: "orange" },
-  { Colorcode: "green" },
-  { Colorcode: "purple" },
-  { Colorcode: "yellow" },
-  { Colorcode: "maroon" },
-  { Colorcode: "magenta" },
-  { Colorcode: "violet" }];
+  colorarray = [{ Colorcode: "#f28b82" }, 
+  { Colorcode: "#fbbc04" }, 
+  { Colorcode: "#fff475" },
+   { Colorcode: "#ccff90" }, 
+   { Colorcode: "#a7ffeb" }, 
+   { Colorcode: "#cbf0f8" },
+    { Colorcode: "#aecbfa" }, 
+    { Colorcode: "#d7aefb" }, 
+    { Colorcode: "#fdcfe8" }, 
+    { Colorcode: "#e6c9a8" }, 
+   { Colorcode: "#e8eaed" },
+    { Colorcode: "white"}];
   constructor(private note: NotesService ,private activatedroute:ActivatedRoute) { }
 
   ngOnInit(): void {

@@ -10,6 +10,34 @@
     position: absolute;
     border: 0.5px solid rgb(222, 214, 214);
 }
+.mainDiv-xs{
+    width: 100%;
+    height:70%;
+    // background-color: aqua;
+    border: 0px solid rgb(220, 213, 213);
+    margin-top: 2.5%;
+    margin-left: -10%;
+    margin-right: 50%;
+    // position: relative;
+}
+.input-xs{
+    width:90%;
+    height:90px;
+    font-size: 11px;
+    // background-color: blue;
+}
+.innerDiv-xs{
+    width: 60%;
+    height:90%;
+    position:relative;
+    left: 50px;
+}
+.for-xs{
+    width: 90%;
+    height:100%;
+    position:relative;
+    top: 15px;
+}
 
 .innerDiv {
     display: block;

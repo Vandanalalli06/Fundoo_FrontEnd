@@ -1,6 +1,6 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-<div fxLayout="row" fxLayoutAlign=" center" class="mainDiv">
-    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
+<div fxLayout="row" fxLayoutAlign="center" class="mainDiv" ngClass.xs="mainDiv-xs" ngClass.sm="mainDiv-xs" ngClass.md="mainDiv-xs" ngClass.lg="mainDiv-xs">
+    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv" ngClass.xs="innerDiv-xs" ngClass.sm="innerDiv-xs" ngClass.md="innerDiv-xs" ngClass.lg="innerDiv-xs">
         <div>
             <h1>
                 <span style="color: blue;">F</span>
@@ -14,20 +14,20 @@
         <div class="innerDiv">
             <h1 class="account">Create your Fundoo Account</h1>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-between center">
-            <mat-form-field appearance="outline">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutAlign.xs="space-between center">
+            <mat-form-field appearance="outline" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>First name</mat-label>
                 <input matInput placeholder="firstname" formControlName="firstName">
                 <mat-error>First Name is required</mat-error>
             </mat-form-field>
-            <mat-form-field appearance="outline" style="margin-left: 13px;">
+            <mat-form-field appearance="outline" style="margin-left: 13px;" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label> Last name</mat-label>
                 <input matInput placeholder="Last Name" type="name" formControlName="lastName">
                 <mat-error>Last Name is required</mat-error>
             </mat-form-field>
         </div>
         <div class="innerDiv">
-            <mat-form-field appearance="outline" style="width:100% ;">
+            <mat-form-field appearance="outline" style="width:100% ;" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>Username</mat-label>
                 <input matInput placeholder="email" type="" formControlName="email">
                 <mat-error>Email Address is required</mat-error>
@@ -37,14 +37,14 @@
         <div class="innerDiv">
             <a href="#" class="myAccount">Use my current email address instead</a>
         </div>
-        <div fxLayout="row" fxLayoutAlign="space-between">
-            <mat-form-field appearance="outline">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between" fxLayoutAlign.xs="space-between">
+            <mat-form-field appearance="outline" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>Password</mat-label>
                 <mat-error>Password must be at least 8 characters</mat-error>
                 <input matInput placeholder="Password" type="password" formControlName="password">
             </mat-form-field>
 
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>Confirm </mat-label>
                 <input matInput placeholder="ConfirmPassword" type="password" formControlName="confirmPassword">
                 <mat-error>Password is required </mat-error>
@@ -63,9 +63,9 @@
     </div>
     
 
-    <div fxLayout="column" fxLayoutAlign="none center">
-        <img src="../../../assets/googlelogo.svg" alt="" style="width: 40vh;margin-top: -60px;">
-        <pre class="section-pre">One account. All of Fundoo
+    <div fxLayout="column" fxLayoutAlign="none center" ngClass.xs="img-xs" ngClass.sm="img-xs" ngClass.md="img-xs" ngClass.lg="img-xs">
+        <img src="../../../assets/googlelogo.svg" ngClass.xs="img1-xs" ngClass.sm="img1-xs" ngClass.md="img1-xs" ngClass.lg="img1-xs" alt="" style="width: 40vh;margin-top: -60px;">
+        <pre class="section-pre" ngClass.xs="note-xs" ngClass.sm="note-xs" ngClass.md="note-xs" ngClass.lg="note-xs">One account. All of Fundoo
      working for you.</pre>
     </div>
 <div>

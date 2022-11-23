@@ -1,7 +1,7 @@
 <form [formGroup]="login" (ngSubmit)="onSubmit()">
-<div fxLayout="column" fxLayoutAlign="space-between center" class="mainDiv">
-    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv">
-        <div fxLayout="row" fxLayoutAlign="center center" class="innerDiv">
+<div fxLayout="column" fxLayoutAlign="space-between center" class="mainDiv" ngClass.xs="mainDiv-xs"ngClass.sm="mainDiv-xs" ngClass.md="mainDiv-xs" ngClass.lg="mainDiv-xs">
+    <div fxLayout="column" fxLayoutAlign="space-around" class="innerDiv" ngClass.xs="innerDiv-xs" ngClass.sm="innerDiv-xs" ngClass.md="innerDiv-xs" ngClass.lg="innerDiv-xs">
+        <div fxLayout="row" fxLayoutAlign="center center" class="innerDiv" ngClass.xs="innerDiv-xs" ngClass.sm="innerDiv-xs" ngClass.md="innerDiv-xs" ngClass.lg="innerDiv-xs">
             <h1>
                 <span style="color: blue;">F</span>
                 <span style="color: red;">u</span>
@@ -11,26 +11,26 @@
                 <span style="color: blue;">o</span>
             </h1>
         </div>
-        <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
             <h1 class="h1-section-signIn">Sign In</h1>
         </div>
-        <div fxLayout="row" fxLayoutAlign="center center">
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngCLass.lg="input-xs">
             <h1 class="h1-section-account">Use your Fundoo Account</h1>
         </div>
-        <div fxLayout="column" fxLayoutAlign="center center" class="xyz">
-            <mat-form-field appearance="outline" style="width:135%">
+        <div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="center center" fxLayoutAlign.xs="center center" class="xyz" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
+            <mat-form-field appearance="outline" style="width:135%" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>Email or phone</mat-label>
                 <input matInput placeholder="" type="email" formControlName="email">
                 <mat-error>Email or phone is required</mat-error>
 
             </mat-form-field>
-            <mat-form-field appearance="outline" style="width:135%">
+            <mat-form-field appearance="outline" style="width:135%" ngClass.xs="input-xs" ngClass.sm="input-xs" ngClass.md="input-xs" ngClass.lg="input-xs">
                 <mat-label>Password</mat-label>
                 <input matInput placeholder="password" formControlName="password" type="password">
                 <mat-error>Password is required</mat-error>
             </mat-form-field>
         </div>
-        <a href="#" class="linkProperty" routerLink="/forgetpassword">Forget Password?</a>
+        <a href="#" class="linkProperty" routerLink="/forgetpassword" ngClass.xs="for-xs">Forget Password?</a>
         <div>
             <p class="section-paragraph">Not your computer? Use a Private Window to sign in. </p>
             <a href="#" class="linkProperty">Learn more </a>

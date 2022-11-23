@@ -8,13 +8,29 @@
     position: absolute;
     border: 0.5px solid rgb(222, 214, 214);
 }
+.mainDiv-xs{
+    width: 100%;
+    height:120%;
+    // background-color: aqua;
+    border: 0px solid rgb(220, 213, 213);
+    margin-top: 2.5%;
+    margin-left: 0%;
+}
+.input-xs{
+    width:100%;
+    height:60px;
+    font-size: 11px;
+}
 
 .innerDiv {
     display: block;
     margin-bottom: 30px;
     text-align: justify;
 }
-
+.innerDiv-xs{
+    width: 100%;
+    height:90%;
+}
 .myAccount {
     font-family: Roboto, Arial, sans-serif;
     font-size: 1.2rem;
@@ -97,4 +113,14 @@ a:hover {
     text-align: center;
     color: #202124;
     
+}
+.img-xs{
+    display:none;
+
+}
+.img1-xs{
+    display:none;
+}
+.note-xs{
+    display:none;
 }
